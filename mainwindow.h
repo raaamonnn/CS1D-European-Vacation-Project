@@ -2,11 +2,13 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "planatrip.h"
-#include "displayinformation.h"
-#include "admin.h"
+#include <QString>
+#include <QMessageBox>
+#include "user.h"
+#include "dbmanager.h"
 
-namespace Ui {
+namespace Ui
+{
 class MainWindow;
 }
 
@@ -18,18 +20,15 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-private slots:
-    void on_planATripButton_clicked();
-
-    void on_displayInformationButton_clicked();
-
-    void on_adminButton_clicked();
-
 private:
     Ui::MainWindow *ui;
-    planATrip planATrip;
-    displayInformation displayInformation;
-    admin admin;
+
+private slots:
+    void on_login_clicked();
+
+private:
+   User user;
+   dbManager dbManager;
 };
 
 #endif // MAINWINDOW_H

@@ -6,73 +6,79 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1997</width>
-    <height>1230</height>
+    <width>1315</width>
+    <height>695</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="planATripButton">
+   <widget class="QLineEdit" name="username">
     <property name="geometry">
      <rect>
-      <x>1080</x>
-      <y>820</y>
-      <width>391</width>
-      <height>191</height>
+      <x>810</x>
+      <y>420</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="maxLength">
+     <number>10</number>
+    </property>
+    <property name="placeholderText">
+     <string>Username</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="password">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>480</y>
+      <width>321</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>MV Boli</family>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Password</string>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="login">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>550</y>
+      <width>71</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Plan A Trip</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="displayInformationButton">
-    <property name="geometry">
-     <rect>
-      <x>1470</x>
-      <y>820</y>
-      <width>401</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Display Information</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="adminButton">
-    <property name="geometry">
-     <rect>
-      <x>1350</x>
-      <y>1010</y>
-      <width>251</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Admin</string>
+     <string>Login</string>
     </property>
    </widget>
   </widget>
-  <widget class="QMenuBar" name="menuBar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1997</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
-  <widget class="QStatusBar" name="statusBar"/>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
