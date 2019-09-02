@@ -25,14 +25,23 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        admin.cpp \
+        displayinformation.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        planatrip.cpp
 
 HEADERS += \
-        mainwindow.h
+        admin.h \
+        displayinformation.h \
+        mainwindow.h \
+        planatrip.h
 
 FORMS += \
-        mainwindow.ui
+        admin.ui \
+        displayinformation.ui \
+        mainwindow.ui \
+        planatrip.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
