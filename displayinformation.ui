@@ -6,24 +6,57 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>832</width>
+    <height>539</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QTableView" name="travel">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>200</y>
+     <x>140</x>
+     <y>140</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableView" name="food">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>140</y>
+     <width>256</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadCities">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>350</y>
      <width>80</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
-    <string>displayInformation</string>
+    <string>Load Cities</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loadFood">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>350</y>
+     <width>80</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Load Food</string>
    </property>
   </widget>
  </widget>

@@ -15,6 +15,11 @@ public:
     explicit displayInformation(QWidget *parent = nullptr);
     ~displayInformation();
 
+private slots:
+    void on_loadCities_clicked();
+
+    void on_loadFood_clicked();
+
 private:
     Ui::displayInformation *ui;
 };

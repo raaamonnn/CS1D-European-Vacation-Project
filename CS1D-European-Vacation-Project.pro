@@ -26,6 +26,7 @@ CONFIG += c++11
 
 SOURCES += \
         admin.cpp \
+        adminview.cpp \
         displayinformation.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -33,12 +34,14 @@ SOURCES += \
 
 HEADERS += \
         admin.h \
+        adminview.h \
         displayinformation.h \
         mainwindow.h \
         planatrip.h
 
 FORMS += \
         admin.ui \
+        adminview.ui \
         displayinformation.ui \
         mainwindow.ui \
         planatrip.ui

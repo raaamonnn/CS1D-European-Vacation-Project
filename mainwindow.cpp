@@ -15,18 +15,15 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_planATripButton_clicked()
 {
-    destroy();
-    planATrip.showMaximized();
+    planATrip.show();
 }
 
 void MainWindow::on_displayInformationButton_clicked()
 {
-    destroy();
-    displayInformation.showMaximized();
+    displayInformation.show();
 }
 
 void MainWindow::on_adminButton_clicked()
 {
-    destroy();
-    admin.showMaximized();
+    admin.show();
 }

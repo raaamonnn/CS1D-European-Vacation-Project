@@ -12,3 +12,11 @@ admin::~admin()
 {
     delete ui;
 }
+
+void admin::on_login_clicked()
+{
+    //database stuff
+    //if login correct then show next screen
+    destroy();
+    adminView.show();
+}

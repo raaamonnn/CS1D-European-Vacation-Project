@@ -2,6 +2,7 @@
 #define ADMIN_H
 
 #include <QDialog>
+#include "adminview.h"
 
 namespace Ui {
 class admin;
@@ -15,8 +16,12 @@ public:
     explicit admin(QWidget *parent = nullptr);
     ~admin();
 
+private slots:
+    void on_login_clicked();
+
 private:
     Ui::admin *ui;
+    adminView adminView;
 };
 
 #endif // ADMIN_H
