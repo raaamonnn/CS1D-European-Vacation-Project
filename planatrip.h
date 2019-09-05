@@ -15,6 +15,15 @@ public:
     explicit planATrip(QWidget *parent = nullptr);
     ~planATrip();
 
+private slots:
+    void on_parisTrip_clicked();
+
+    void on_londonTrip_clicked();
+
+    void on_londonTrip_2_clicked();
+
+    void on_customTrip_clicked();
+
 private:
     Ui::planATrip *ui;
 };

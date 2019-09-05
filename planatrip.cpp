@@ -12,3 +12,18 @@ planATrip::~planATrip()
 {
     delete ui;
 }
+
+void planATrip::on_parisTrip_clicked()
+{
+
+}
+
+void planATrip::on_londonTrip_clicked()
+{
+
+}
+
+void planATrip::on_customTrip_clicked()
+{
+
+}
