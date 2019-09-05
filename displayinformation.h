@@ -2,6 +2,8 @@
 #define DISPLAYINFORMATION_H
 
 #include <QDialog>
+#include <QtSql/QSqlQuery>
+#include <QtSql/QSqlQueryModel>
 
 namespace Ui {
 class displayInformation;
@@ -19,6 +21,8 @@ private slots:
     void on_loadCities_clicked();
 
     void on_loadFood_clicked();
+
+    void on_loadData_clicked();
 
 private:
     Ui::displayInformation *ui;

@@ -1,6 +1,7 @@
 #include "displayinformation.h"
 #include "ui_displayinformation.h"
 
+
 displayInformation::displayInformation(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::displayInformation)
@@ -13,12 +14,21 @@ displayInformation::~displayInformation()
     delete ui;
 }
 
-void displayInformation::on_loadCities_clicked()
+void displayInformation::on_loadData_clicked()
 {
-    //1.	Display the list of European cities and their distances from Paris.
-}
+    //    if (!getDatabaseManager()->getDatabase().isOpen()) {
+    //        qDebug() << "Error: connection with database fail";
+    //        return;
+    //    }
+        QSqlQuery* query = new QSqlQuery( "DATABASE");
 
-void displayInformation::on_loadFood_clicked()
-{
-    //2.	Display all the traditional food items for any given city.
+        QSqlQueryModel *modal = new QSqlQueryModel();
+        query->prepare("SELECT CITIES and DISTANCE and FOOD FROM DATABASE");
+        query->exec();
+
+        modal->setQuery(*query);
+
+        ui->table->setModel(modal);
+
+        //close database conection
 }
