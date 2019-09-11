@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QtSql/QSqlQuery>
 #include <QtSql/QSqlQueryModel>
+#include <databasemanager.h>
 
 namespace Ui {
 class displayInformation;
@@ -15,17 +16,20 @@ class displayInformation : public QDialog
 
 public:
     explicit displayInformation(QWidget *parent = nullptr);
+    displayInformation(DatabaseManager *databaseManager)
+    {
+        this->databaseManager = databaseManager;
+    }
+
     ~displayInformation();
 
 private slots:
-    void on_loadCities_clicked();
-
-    void on_loadFood_clicked();
 
     void on_loadData_clicked();
 
 private:
     Ui::displayInformation *ui;
+    DatabaseManager *databaseManager;
 };
 
 #endif // DISPLAYINFORMATION_H

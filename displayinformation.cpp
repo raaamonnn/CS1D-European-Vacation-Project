@@ -20,10 +20,10 @@ void displayInformation::on_loadData_clicked()
     //        qDebug() << "Error: connection with database fail";
     //        return;
     //    }
-        QSqlQuery* query = new QSqlQuery( "DATABASE");
+        QSqlQuery* query = new QSqlQuery("C:/Users/annea/OneDrive/Desktop/CS1D-European-Vacation-Project-master");
 
         QSqlQueryModel *modal = new QSqlQueryModel();
-        query->prepare("SELECT CITIES and DISTANCE and FOOD FROM DATABASE");
+        query->prepare("SELECT *");
         query->exec();
 
         modal->setQuery(*query);
@@ -32,3 +32,12 @@ void displayInformation::on_loadData_clicked()
 
         //close database conection
 }
+
+//void displayInformation::connectDatabase()
+//{
+//    QSqlDatabase Database;
+
+//        Database.addDatabase("European Vacation");
+//        Database.setDatabaseName("C:/Users/annea/OneDrive/Desktop/CS1D-European-Vacation-Project-master");
+
+//}
