@@ -1,5 +1,6 @@
 #include "displayinformation.h"
 #include "ui_displayinformation.h"
+#include <QtDebug>
 
 
 displayInformation::displayInformation(QWidget *parent) :
@@ -16,20 +17,23 @@ displayInformation::~displayInformation()
 
 void displayInformation::on_loadData_clicked()
 {
-    //    if (!getDatabaseManager()->getDatabase().isOpen()) {
-    //        qDebug() << "Error: connection with database fail";
-    //        return;
-    //    }
-        QSqlQuery* query = new QSqlQuery("C:/Users/annea/OneDrive/Desktop/CS1D-European-Vacation-Project-master");
+
+    DatabaseManager database("C:/Users/annea/OneDrive/Desktop/CS1D-European-Vacation-Project-master/European Vacation");
+    database.connect();
+
+    if (!database.getDatabase().isOpen()) {
+        qDebug() << "Error: connection with database fail";
+        return;
+    }
+        QSqlQuery* query = new QSqlQuery("C:/Users/annea/OneDrive/Desktop/CS1D-European-Vacation-Project-master/European Vacation");
 
         QSqlQueryModel *modal = new QSqlQueryModel();
-        query->prepare("SELECT *");
+        query->prepare("SELECT * From Amsterdam");
         query->exec();
 
         modal->setQuery(*query);
 
         ui->table->setModel(modal);
-
         //close database conection
 }
 
