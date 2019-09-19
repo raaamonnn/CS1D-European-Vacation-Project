@@ -27,7 +27,6 @@ CONFIG += c++11
 SOURCES += \
         admin.cpp \
         adminview.cpp \
-        databasemanager.cpp \
         displayinformation.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -36,7 +35,6 @@ SOURCES += \
 HEADERS += \
         admin.h \
         adminview.h \
-        databasemanager.h \
         displayinformation.h \
         mainwindow.h \
         planatrip.h
