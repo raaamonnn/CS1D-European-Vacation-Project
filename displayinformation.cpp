@@ -16,17 +16,31 @@ displayInformation::~displayInformation()
 
 void displayInformation::on_loadData_clicked()
 {
-    //db.opendb();
+        opendb();
 
-        QSqlQuery* query = new QSqlQuery( "DATABASE");
+        QSqlQuery* query = new QSqlQuery(mydb);
 
-        QSqlQueryModel *modal = new QSqlQueryModel();
+        QSqlQueryModel *model = new QSqlQueryModel();
+
+        model->setHeaderData(0, Qt::Horizontal, QObject::tr("City"));
+        model->setHeaderData(1, Qt::Horizontal, QObject::tr("Food"));
+
         query->prepare("SELECT * FROM Berlin");
         query->exec();
 
-        modal->setQuery(*query);
+        int i = 1;
+        while (query->next()) {
+            qDebug() << i++;
+            QString City = query->value(0).toString();
+            QString Food = query->value(1).toString();
+            qDebug() << City << " " << Food << "\n";
+        }
 
-        ui->table->setModel(modal);
+//        model->setQuery(*query);
 
-        //db.closedb();
+        ui->table->setModel(model);
+
+        closedb();
+
+        qDebug() << (model->rowCount());
 }
