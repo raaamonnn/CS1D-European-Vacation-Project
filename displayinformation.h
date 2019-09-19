@@ -39,10 +39,6 @@ public:
     ~displayInformation();
 
 private slots:
-    void on_loadCities_clicked();
-
-    void on_loadFood_clicked();
-
     void on_loadData_clicked();
 
 private:

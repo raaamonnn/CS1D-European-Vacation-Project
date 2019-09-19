@@ -20,8 +20,6 @@ private slots:
 
     void on_londonTrip_clicked();
 
-    void on_londonTrip_2_clicked();
-
     void on_customTrip_clicked();
 
 private:
