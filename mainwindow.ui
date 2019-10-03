@@ -6,61 +6,38 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1997</width>
-    <height>1230</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="planATripButton">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>60</y>
-      <width>391</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Plan A Trip</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="displayInformationButton">
-    <property name="geometry">
-     <rect>
-      <x>570</x>
-      <y>60</y>
-      <width>401</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Display Information</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="adminButton">
-    <property name="geometry">
-     <rect>
-      <x>450</x>
-      <y>250</y>
-      <width>251</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Admin</string>
-    </property>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Customer</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>Admin</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1997</width>
-     <height>20</height>
+     <width>400</width>
+     <height>19</height>
     </rect>
    </property>
   </widget>

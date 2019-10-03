@@ -1,5 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include<displayinformation.h>
+#include<admin.h>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -13,17 +15,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_planATripButton_clicked()
+void MainWindow::on_pushButton_clicked()
 {
-    planATrip.show();
+    displayInformation window;
+    window.setModal(true);
+    window.exec();
 }
 
-void MainWindow::on_displayInformationButton_clicked()
+void MainWindow::on_pushButton_2_clicked()
 {
-    displayInformation.show();
-}
-
-void MainWindow::on_adminButton_clicked()
-{
-    admin.show();
+    admin window;
+    window.setModal(true);
+    window.exec();
 }

@@ -51,7 +51,22 @@ void admin::on_pushButton_clicked() //adding a new food item
     }
     else{qDebug()<<"Changes failed";
     query.lastError();}
+
     db.connClose();
+
+    admin conn;
+    QSqlQueryModel* model = new QSqlQueryModel();
+    conn.connOpen();
+    QSqlQuery* qry = new QSqlQuery(conn.mydb);
+
+    qry->prepare("select * from '"+table+"'");
+    qry->exec();
+
+    model->setQuery(*qry);
+    ui->tableView->setModel(model);
+
+    conn.connClose();
+
 }
 
 void admin::on_pushButton_3_clicked() //change price of food item
@@ -67,6 +82,19 @@ void admin::on_pushButton_3_clicked() //change price of food item
     query.prepare("update '"+table+"' set Price='"+new_price+"' where Food = '"+food+"'");
     query.exec();
     db.connClose();
+
+    admin conn;     //refreshing the table
+    QSqlQueryModel* model = new QSqlQueryModel();
+    conn.connOpen();
+    QSqlQuery* qry = new QSqlQuery(conn.mydb);
+
+    qry->prepare("select * from '"+table+"'");
+    qry->exec();
+
+    model->setQuery(*qry);
+    ui->tableView->setModel(model);
+
+    conn.connClose();
 }
 
 void admin::on_pushButton_2_clicked() //remove a food item entirely
@@ -87,4 +115,15 @@ void admin::on_pushButton_2_clicked() //remove a food item entirely
         std::cout << "query failed";
     }
     db.connClose();
+
+    admin conn;     //refreshing the table
+    QSqlQueryModel* model = new QSqlQueryModel();
+    conn.connOpen();
+    QSqlQuery* qry = new QSqlQuery(conn.mydb);
+
+    qry->prepare("select * from '"+table+"'");
+    qry->exec();
+
+    model->setQuery(*qry);
+    ui->tableView->setModel(model);
 }
