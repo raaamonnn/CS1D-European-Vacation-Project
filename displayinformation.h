@@ -67,6 +67,8 @@ private slots:
 
     void on_pushButton_14_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::displayInformation *ui;
 };

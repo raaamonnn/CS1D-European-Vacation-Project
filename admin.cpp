@@ -1,12 +1,12 @@
 #include "admin.h"
 #include "ui_admin.h"
 #include "qaxobject.h"
+#include <cctype>
 admin::admin(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::admin)
 {
     ui->setupUi(this);
-
 }
 
 admin::~admin()
@@ -36,8 +36,12 @@ void admin::on_comboBox_activated(const QString &arg1) //changing city
 void admin::on_pushButton_clicked() //adding a new food item
 {
     QString food, price, table;
-    table = ui->comboBox->itemText(ui->comboBox->currentIndex());
 
+    std::string checker = ui->lineEdit->text().toStdString();
+    std::string checker2 = ui->lineEdit_2->text().toStdString();
+    if(isAlpha(checker)){
+        if(isNum(checker2)){
+    table = ui->comboBox->itemText(ui->comboBox->currentIndex());
     food = ui->lineEdit->text();
     price = ui->lineEdit_2->text();
 
@@ -67,11 +71,30 @@ void admin::on_pushButton_clicked() //adding a new food item
     ui->tableView->setModel(model);
 
     conn.connClose();
+        }
+        else{
+            QMessageBox messageBox;
+            messageBox.critical(0,"Error","Invalid Price Input (only numeric characters allowed)");
+            messageBox.setFixedSize(500,200);
+        }
+    }
+    else {
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error","Invalid Name Input (only alphabetic characters allowed)");
+        messageBox.setFixedSize(500,200);
+        }
+
 }
 
 void admin::on_pushButton_3_clicked() //change price of food item
 {
     QString food, new_price, table;
+    std::string checker = ui->lineEdit_4->text().toStdString();
+    std::string checker2 = ui->lineEdit_5->text().toStdString();
+    if(isAlpha(checker)){
+        if(isNum(checker2)){
+
+
     food = ui->lineEdit_4->text();
     new_price = ui->lineEdit_5->text();
     table = ui->comboBox->itemText(ui->comboBox->currentIndex());
@@ -95,11 +118,27 @@ void admin::on_pushButton_3_clicked() //change price of food item
     ui->tableView->setModel(model);
 
     conn.connClose();
+
+        }
+        else{
+            QMessageBox messageBox;
+            messageBox.critical(0,"Error","Invalid Price Input (only numeric characters allowed)");
+            messageBox.setFixedSize(500,200);
+        }
+    }
+    else {
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error","Invalid Name Input (only alphabetic characters allowed)");
+        messageBox.setFixedSize(500,200);
+        }
 }
 
 void admin::on_pushButton_2_clicked() //remove a food item entirely
 {
     QString food, table;
+    std::string checker = ui->lineEdit_3->text().toStdString();
+
+    if(isAlpha(checker)){
     food = ui->lineEdit_3->text();
     table = ui->comboBox->itemText(ui->comboBox->currentIndex());
 
@@ -126,6 +165,12 @@ void admin::on_pushButton_2_clicked() //remove a food item entirely
 
     model->setQuery(*qry);
     ui->tableView->setModel(model);
+}
+    else{
+        QMessageBox messageBox;
+        messageBox.critical(0,"Error","Invalid Input (only alphabetic characters allowed)");
+        messageBox.setFixedSize(500,200);
+    }
 }
 
 void admin::on_pushButton_4_clicked() //add new city

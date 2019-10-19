@@ -29,18 +29,24 @@ SOURCES += \
         mainwindow.cpp \
     admin.cpp \
     displayinformation.cpp \
+    planning_page.cpp \
+    planning2.cpp
 
 
 HEADERS += \
         mainwindow.h \
     admin.h \
     displayinformation.h \
+    planning_page.h \
+    planning2.h
 
 
 FORMS += \
         mainwindow.ui \
     displayinformation.ui \
-    admin.ui
+    admin.ui \
+    planning_page.ui \
+    planning2.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

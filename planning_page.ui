@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Planning_Page</class>
+ <widget class="QDialog" name="Planning_Page">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>877</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QStatusBar" name="statusbar"/>
+   </item>
+   <item>
+    <widget class="QMenuBar" name="menubar"/>
+   </item>
+   <item>
+    <widget class="QWidget" name="centralwidget" native="true">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="1" column="0">
+       <widget class="QTextEdit" name="Route_TextEdit"/>
+      </item>
+      <item row="6" column="1">
+       <widget class="QPushButton" name="ChoosePath_pushButton">
+        <property name="text">
+         <string>Choose Path</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="Paris_PushButton">
+        <property name="text">
+         <string>Start at Paris</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3" colspan="2">
+       <widget class="QListView" name="EndCityList"/>
+      </item>
+      <item row="5" column="3">
+       <widget class="QPushButton" name="Save_Route_pushButton">
+        <property name="text">
+         <string>Save Route</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="London_PushButton">
+        <property name="text">
+         <string>Start at London</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="3" colspan="2">
+       <widget class="QComboBox" name="To_ComboBox"/>
+      </item>
+      <item row="1" column="1">
+       <widget class="QTextEdit" name="StartCityTextEdit"/>
+      </item>
+      <item row="1" column="5" colspan="2">
+       <widget class="QListView" name="DistanceList"/>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="From_ComboBox"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,6 +1,7 @@
 #include "displayinformation.h"
 #include "ui_displayinformation.h"
 #include "mainwindow.h"
+#include "planning_page.h"
 displayInformation::displayInformation(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::displayInformation)
@@ -226,4 +227,12 @@ void displayInformation::on_pushButton_14_clicked()
     ui->tableView_13->setModel(model);
 
     conn.connClose();
+}
+
+void displayInformation::on_pushButton_clicked()
+{
+    Planning_Page window;
+    window.setModal(true);
+    window.exec();
+
 }

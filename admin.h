@@ -1,7 +1,8 @@
 #ifndef ADMIN_H
 #define ADMIN_H
 
-
+#include<QMessageBox>
+#include<cctype>
 #include <QDialog>
 #include<string>
 #include<QtSql>
@@ -32,6 +33,27 @@ public:
             qDebug("Failed to connect to DB");
             return false;}
         }
+    bool isAlpha(std::string checker)
+    {
+        checker.erase( remove( checker.begin(), checker.end(), ' ' ), checker.end() );
+        for(int i = 0; i < checker.size(); i++){
+            if(!isalpha(checker[i])) return false;
+            else{
+                i++;
+            }
+        }
+        return true;
+    }
+    bool isNum(std::string checker){
+    checker.erase( remove(checker.begin(), checker.end(), '.'),checker.end());
+    for(int i = 0; i < checker.size(); i++){
+        if(!isdigit(checker[i])) return false;
+        else{
+            i++;
+        }
+    }
+    return true;
+    }
     explicit admin(QWidget *parent = nullptr);
     ~admin();
 
