@@ -1,0 +1,13 @@
+release/login.o
+release/main.o
+release/mainwindow.o
+release/admin.o
+release/displayinformation.o
+release/planning_page.o
+release/planning2.o
+release/moc_login.o
+release/moc_mainwindow.o
+release/moc_admin.o
+release/moc_displayinformation.o
+release/moc_planning_page.o
+release/moc_planning2.o

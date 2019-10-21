@@ -1,0 +1,13 @@
+debug/login.o
+debug/main.o
+debug/mainwindow.o
+debug/admin.o
+debug/displayinformation.o
+debug/planning_page.o
+debug/planning2.o
+debug/moc_login.o
+debug/moc_mainwindow.o
+debug/moc_admin.o
+debug/moc_displayinformation.o
+debug/moc_planning_page.o
+debug/moc_planning2.o
